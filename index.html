@@ -68,11 +68,14 @@ def update_cells(state):
     for i, value in enumerate(state):
         Element(f"pos-{i}-x").add_class("hidden")
         Element(f"pos-{i}-o").add_class("hidden")
+        Element(f"pos-{i}-button").add_class("hidden")  
         if value == 0:
             Element(f"pos-{i}-x").remove_class("hidden")
         elif value == 1:
             Element(f"pos-{i}-o").remove_class("hidden")
-
+        else:
+            Element(f"pos-{i}-button").remove_class("hidden")
+  
 def display_message(value):
     Element("message").write(value)
 
